@@ -1,0 +1,57 @@
+<div class="nav-bar"></div>
+<div class="bio-wrapper">
+  <div class="bio-container">
+    <div class="avatar-container">
+      <div id="avatar"></div>
+    </div>
+    <div class="bio-description">
+      <h1>Hello, my name is Fabrizio Spadaro.</h1>
+      <p>I am an Italian <b>videogame programmer</b> and <b>full stack developer</b>. I worked with <b>Unity3D</b> since 2011, as <b>c#</b> programmer, game designer and level designer. During Le Wagon Milan in July 2018, i mastered <b>js css html ruby and rails</b> and now, I can consider myself, a full stack developer.</p>
+    </div>
+  </div>
+</div>
+<div class="skills-container">
+  <h2>My skills: </h2>
+  <div class="row">
+    <% @skills.each do |skill|%>
+    <div class="col-xs-6 col-sm-6">
+      <div class = "bar">
+        <div class ="custom-progress">
+          <div class = "progress-text" id= <%= skill.values.first %> ><%= skill.keys.first %></div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+<div class="bio-description-container">
+  <div class="bio-description2">
+    <h3>Let’s get this out of the way:</h3>
+    <p><b>Real name: </b>Fabrizio Spadaro | <b>Job: </b> Freelance</p>
+    <p><b>Gender:</b> Male | <b>Born:</b> April 28, 1997</p>
+    <p><b>Height:</b> Above Average | <b>Weight:</b> Overweight</p>
+    <p><b>Intelligence:</b> Oh yes | <b>Civil status:</b> Confused</p>
+    <p><b>Religion:</b> Science | <b>Sexual orientation:</b> Straight</p>
+    <p><b>Economy:</b> T.B.D | <b>Political views:</b> Undecided</p>
+  </div>
+</div>
+<div class="contact-info">
+  <%= link_to "https://twitter.com/_b3lv4",target: :_blank do%>
+    <%= image_tag("twitter", id: "contact-item") %>
+  <% end %>
+  <%= link_to "https://github.com/fabriziospadaro", target: :_blank do%>
+    <%= image_tag("github", id: "contact-item") %>
+  <% end %>
+  <%= link_to "https://www.linkedin.com/in/fabrizio-spadaro-962790166/",target: :_blank do%>
+    <%= image_tag("linkedin", id: "contact-item") %>
+  <% end %>
+</div>
+
+<div class="selection-bar">
+  <div class="close-nav-bar"></div>
+  <%= link_to "Portfolio", "#"%>
+  <hr>
+  <%= link_to "Contact", "#"%>
+  <hr>
+  <%= link_to "Laboratory", "#"%>
+</div>
